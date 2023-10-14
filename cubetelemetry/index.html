@@ -4,27 +4,56 @@
 <head>
   <meta charset="utf-6">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>CubeSat Telemetry</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body  style="background-color:black;" >
+<body>
 
   <script src="script.js"></script>
-<main>
-    <section> 
-        <img src="images/images.jpg" width="150"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images (1).jpg" width="250">
-       <p>CALIBRATION&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbspTRAJECTORY</p>
-        <h2>Relative to center of earth &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relative to center of moon</h2>
-        <p><u>Vehicle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;satellite</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Vehicle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></p>
-      <p><u>Distance(km)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.568.09</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Distance(km)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></p>
-      <p><u>Velocity(km/sec)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.38</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Velocity(km/sec)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></p>
-      <img src="images (2).jpg"  width="450" height="250" >
-      <hr>
-        <h1><b>&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp; 🔴LIVE</b></h1>
-        <img src="images (3).jpg" width="450">
-      
-</main>
+  <div>
+      <div> 
+        <div style="display: flex;justify-content: space-evenly;align-items: flex-end;">
+          <div>
+            <img src="images/images.jpg" width="150"> 
+            <p>CALIBRATION</p>
+          </div>
+          <div>
+            <img width="250" src="images/images (1).jpg">
+            <p>TRAJECTORY</p>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-evenly;">
+          <div>
+            <h2>Relative to center of earth</h2> 
+            <div style="display: flex;justify-content: space-evenly;flex-direction: column;align-content: space-around;">
+              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Vehicle</h4><h4>Pragyan</h4>
+              </div>
+              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Distance(km)</h4><h4>6,568.09</h4>
+              </div>
+              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Velocity(km/sec)</h4><h4>10.38</h4>
+              </div>
+            </div>
+          </div>
+         <div>
+            <h2>Relative to center of Moon</h2> 
+            <div style="display: flex;justify-content: space-evenly;flex-direction: column;align-content: space-around;">
+              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Vehicle</h4><h4>Vikram</h4>
+              </div>
+              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Distance(km)</h4><h4>1,268.09</h4>
+              </div>
+              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Velocity(km/sec)</h4><h4>2.45</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+              <img width="450" height="250" src="images/images (2).jpg">
+
+          <h1><b>🔴LIVE</b></h1>
+          <img width="450" src="images/images (3).jpg">    
+    </div>
+  </div>
+
 </body>
 
 </html>
