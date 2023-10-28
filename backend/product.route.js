@@ -1,12 +1,45 @@
 const express = require('express');
 const router = express.Router();
 
- router.get('/',(req,res,next) => {
-    res.send('getting a list of all products......');
- });
+const Product = require('../models/Product.model')
 
- router.post('/',(req,res,next) => {
-    res.send('product created');
- });
+router.get('/',(req,res,next) => {
+    next(new Error("cannot get a list of all products"))
+});
 
- module.exports = router;
+router.post('/',(req,res,next) => {
+
+    console.log(req.body);
+    const product = new Product({
+        name: req.body.name ,
+        price: req.body.price
+    })
+    product.save()
+    .then(result => {
+        console.log(result);
+        res.send(result);
+    })
+    .catch(err => {
+        console.log(err.message);
+    })
+    
+    });
+
+router.get('/:id', (req,res,next)  => {
+    res.send('getting a single product');
+
+});
+
+
+router.patch('/:id', (req,res,next)  => {
+    res.send('updating a single product');
+    
+});
+
+
+
+router.delete('/:id', (req,res,next)  => {
+    res.send('deleting a single product');
+    
+});
+module.exports = router;
