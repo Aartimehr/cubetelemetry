@@ -14,11 +14,12 @@
     display: flex;
     /* width: 00%; */
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0px 10px;
 ">
     <div style="border-radius: 40px;background-color: initial;"> 
-        <div style="padding: 10px;border-radius: 40px;background-color: darkgrey;display: flex;justify-content: space-evenly;align-items: flex-end;">
+        <div style="padding: 10px;border-radius: 40px;/* background-color: darkgrey; */display: flex;justify-content: space-evenly;align-items: flex-end;margin: 10px 0px;" class="box">
           <div>
             <img src="images/images.jpg" width="150"> 
             <p>CALIBRATION</p>
@@ -29,11 +30,12 @@
           </div>
         </div>
         
-              <div style="border-radius: 40px;padding: 0px 10px;display: flex;background-color: gray;justify-content: space-around;">
+              <div style="border-radius: 40px;padding: 0px 10px;display: flex;/* background-color: gray; */justify-content: space-around;margin: 10px 0px;" class="box">
   
-            <div style="display: flex; justify-content: space-evenly;">
-          <div>
-            <h2>Relative to center of earth</h2> 
+            <div style="display: flex;padding: 10px;justify-content: space-evenly;">
+          <div style="
+0px: 10px;padding: 0px 10px;">
+            <h2>Relative - Center of earth</h2> 
             <div style="display: flex;justify-content: space-evenly;flex-direction: column;align-content: space-around;">
               <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Vehicle</h4><h4>Pragyan</h4>
               </div>
@@ -43,8 +45,10 @@
               </div>
             </div>
           </div>
-         <div>
-            <h2>Relative to center of Moon</h2> 
+         <div style="
+    padding: 0px 10px;
+">
+            <h2>Relative - Center of Moon</h2> 
 
               <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <h4>Vehicle</h4><h4>Vikram</h4>
               </div>
@@ -58,40 +62,34 @@
           </div>
           
          
-        
-              <img width="450" height="250" src="images/images (2).jpg" style="
-    border-radius: 40px;
-    padding: 10px 20px;
-    display: flex;
-    background-color: darkgray;
-">
-
-          <h1><b>🔴LIVE</b></h1>
-          <img width="450" src="images/images (3).jpg" style="
-    border-radius: 40px;
-    padding: 10px 20px;
-    background-color: darkgray;
-">    
     </div>
       <div style="
     /* border-radius: 40px; */
-    padding-block: 20px 200px;
+    /* padding-block: 20px 200px; */
     border-radius: 40px;
     background-color: transparent;
+    /* margin: 10px 0px; */
 "> 
-        <div style="
+        <div class="box" style="
     border-radius: 40px;
-    padding: 0px 20px;
-    background-color: lightgray;
+    padding: 16px 31px;
+    display: flex;
+    /* background-color: lightgray; */
+    flex-direction: column;
+    align-items: stretch;
 ">
-               <h1>VAL. SENSOR</h1>
+               <h3>VAL. SENSOR</h3>
 
 <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange" style="
+    width: 100%;
+">
 </div>
-<h1>PRESSURE.G</h1>
+<h3>PRESSURE.G</h3>
 <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange" style="
+    width: 100%;
+">
 </div>
         </div>
         
@@ -99,12 +97,12 @@
               <div style="
     padding-block: 20px;
     border-radius: 40px;
-    background-color: darkgrey;
+    /* background-color: darkgrey; */
     display: flex;
     padding: 0px 20px;
     flex-direction: row;
     justify-content: space-between;
-">
+" class="box">
 
     <div style="
     display: flex;
@@ -112,20 +110,10 @@
     padding: 0px 10px;
 ">
     
-        <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Event</h4><h4>Time</h4></div>
-              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <p>S200 PM IGN</p><p>0.1</p></div>
-                    
-                    <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>SM2000</h4><h4>0.1</h4>
-              </div>
-                    <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>SM2000</h4><h4>0.1</h4>
-              </div>
-                    
-                    <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>SM2000</h4><h4>0.1</h4>
-              </div>
-                    <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>SM2000</h4><h4>0.1</h4>
-</div>
-                                <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>CHANDRAYAN</h4><h4>0.1</h4>
-              </div>
+      <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Event</h4><h4>Time</h4></div>        <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <p>S200 PM IGN</p><p>0.1</p>
+      </div>
+      <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>SM2000</h4><h4>0.1</h4>
+      </div>
     </div>
     <div style="
     display: flex;
@@ -138,15 +126,6 @@
                     
                     <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>SM2000</h4><h4>0.1</h4>
               </div>
-                    <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>SM2000</h4><h4>0.1</h4>
-              </div>
-                    
-                    <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>SM2000</h4><h4>0.1</h4>
-              </div>
-                    <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>SM2000</h4><h4>0.1</h4>
-</div>
-                                <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4><mark>CHANDRAYAN-2</mark></h4><h4><mark>0.1</mark></h4>
-              </div>
     </div>
             
 </div>
@@ -155,11 +134,16 @@
          
         <div style="
     border-radius: 40px;
-    background-color: darkgray;
+    /* background-color: darkgray; */
     padding: 10px 20px;
-">
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: stretch;
+" class="box">
                    <p><small>MISSION VITALS</small></p>  
-  <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>57.96</h4><h4>27.64</h4><h4>8.73</h4></div>
+  <div style="/* text-decoration: underline; */display: flex;padding: -51px;/* flex-direction: row; */justify-content: space-between;">  <h4>57.96</h4><h4>27.64</h4><h4>8.73</h4></div>
 <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4><small style="color:#808080">m/s</small></h4><h4><small style="color:#808080">m/s</small></h4><h4><small style="color:#808080"><smallstyle="color:#808080">km</smallstyle="color:#808080"></small></h4></div>
 
         </div>
@@ -167,13 +151,7 @@
 
 
 
-           <div style="
-    padding: 10px;
-    border-radius: 40px;
-">     
-                <div style="background-color: black;/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h1>ON</h1><h1 style="color:#808080">OFF</h1>
-              </div>    
-           </div>
+
           
     </div>
   </div>
