@@ -1,120 +1,207 @@
 <html><head>
- <meta charset="utf-6">
-  <meta name="viewport" content="width=device-width">
-  <title>CubeSat Telemetry</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-
-  <script src="script.js"></script>
-  <div style="
-    border-radius: 40px;
-    display: flex;
-    /* width: 00%; */
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
-    padding: 0px 10px;
-">
-    <div style="border-radius: 40px;background-color: initial;"> 
-        <div style="padding: 10px;border-radius: 40px;background-color: transparent;display: flex;justify-content: space-evenly;align-items: flex-end;margin: 10px 0px;" class="box">
-         
-          <div>
-            <img width="250" src="images/images (1).jpg">
-            <p>TRAJECTORY</p>
-          </div>
-            
-        </div>
-        <hr>
-              <div style="border-radius: 40px;padding: 0px 10px;display: flex;background-color: transparent;justify-content: space-around;margin: 10px 0px;" class="box">
-  
-            <div style="display: flex;padding: 10px;justify-content: space-evenly;">
+  <meta charset="utf-6">
+   <meta name="viewport" content="width=device-width">
+   <title>CubeSat Telemetry</title>
+   <link href="style.css" rel="stylesheet" type="text/css">
+      <style>
+  body{
+     margin: 0;
+     padding: 0;
+  }
+  .main-body{
+    margin:10 px;
+  }
+ ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #333;
+ }
+ 
+ li {
+   float: left;
+ }
+ 
+ li a, .dropbtn {
+   display: inline-block;
+   color: white;
+   text-align: center;
+   padding: 0px 10px;
+   text-decoration: none;
+ }
+ li.dropdown {
+   display: inline-block;
+ }
+ 
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   min-width: 160px;
+   z-index: 1;
+ }
+ 
+ .dropdown-content a {
+   color: black;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+ }
+ 
+ 
+ .dropdown:hover .dropdown-content {
+   display: block;
+ }
+ </style>
+ 
+ <script>
+ var id = "";
+ const xmlhttp = new XMLHttpRequest();
+ let url = "https://cubesatserver.onrender.com/1Q2W3E4R5T/Satellite/"+ id;
+ xmlhttp.onload = function() {
+   const myObj = JSON.parse(this.responseText);
+   let text = "<option value=\"none\" selected disabled hidden> Choose Your Satellite</option>";
+   console.log(text);
+   for (let x in myObj) {
+     text += "<option>" + myObj[x].name + "</option>";
+   }
+   document.getElementById("sats").innerHTML = text;
+ }
+ xmlhttp.open("GET", url);
+ xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+ xmlhttp.send();
+ $(document).ready(function(){
+     $("#sats").change(function(){
+         var selectedSat = $(this).children("option:selected").val();
+         alert("you have selected " + selectedSat);
+    });
+ });
+ </script>
+ </head>
+ <body>
+ <ul>
+     <li class="dropdown">
+       <p class="dropbtn">Which Satellite do you want to view?</p>
+       <select name="Sats" id="sats">  
+         </select>
+     </li>
+   </ul>
+ 
+   <div class="main-body">
+      <h1 style="color: pink">Satellites</h1>
+   </div>
+ 
+   <script src="script.js"></script>
+   <div style="
+     border-radius: 40px;
+     display: flex;
+     /* width: 00%; */
+     flex-direction: row;
+     align-items: flex-start;
+     justify-content: space-around;
+     padding: 0px 10px;
+ ">
+     <div style="border-radius: 40px;background-color: initial;"> 
+         <div style="padding: 10px;border-radius: 40px;background-color: transparent;display: flex;justify-content: space-evenly;align-items: flex-end;margin: 10px 0px;" class="box">
           
-         <div style="
-    padding: 0px 0px;
-">
-            <h2>distance in earth and moon</h2>
-             <hr>
-              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;"><p style="color:grey">LAT.</p><p style="color:grey">LONG.</p> <p style="color:grey"> ALT.</p>
-              </div>
-              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <p>33.38768</p><p>-13.5554</p> <p>238</p>
-              </div>
-             <hr>
-              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;"><p style="color:grey">PATCH</p><p style="color:grey">YAW</p> <p style="color:grey">ROLL</p>
-              </div>
+           <div>
+             <img width="250" src="images/images (1).jpg">
+             <p>TRAJECTORY</p>
+           </div>
              
-    <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <p>38°</p><p>-13.34°</p> <p>238°</p>
-              </div>
-            </div>
+         </div>
+         <hr>
+               <div style="border-radius: 40px;padding: 0px 10px;display: flex;background-color: transparent;justify-content: space-around;margin: 10px 0px;" class="box">
+   
+             <div style="display: flex;padding: 10px;justify-content: space-evenly;">
+           
+          <div style="
+     padding: 0px 0px;
+ ">
+             <h2>distance in earth and moon</h2>
+              <hr>
+               <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;"><p style="color:grey">LAT.</p><p style="color:grey">LONG.</p> <p style="color:grey"> ALT.</p>
+               </div>
+               <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <p id="data-lat">33.38768</p><p>-13.5554</p> <p>238</p>
+               </div>
+              <hr>
+               <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;"><p style="color:grey">PATCH</p><p style="color:grey">YAW</p> <p style="color:grey">ROLL</p>
+               </div>
+              
+     <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <p>38°</p><p>-13.34°</p> <p>238°</p>
+               </div>
+             </div>
+           
+         </div>
+           </div>
+           
           
-        </div>
-          </div>
-          
+     </div>
+       <div style="
+     /* border-radius: 40px; */
+     /* padding-block: 20px 200px; */
+     border-radius: 40px;
+     background-color: transparent;
+     /* margin: 10px 0px; */
+ "> 
+     <hr>
+         <div class="box" style="
+     border-radius: 40px;
+     padding: 16px 31px;
+     display: flex;
+     background-color: transparent;
+     flex-direction: column;
+     align-items: stretch;
+ ">
+                <h2>POWER SYSTEM</h2>
+ 
+ <div style="
+     background-color: silver;
+ ">
+ 
+ <div class="w3-border" style="
+     border-radius: 10 px;
+     border-radius: 10 px;
+ ">
+   <div class="w3-grey" style="background-color: darkseagreen;height:24 px;width:20 %"></div>
+ </div>
+ </div>
+             <p>05:59:48</p>
+             <hr>
+ <div style="text-decoration: underline;display: flex;flex-direction: row;justify-content: space-between;">  <h2>Sensor</h2><h2>Data</h2>
+       </div>
+             <hr>
+ 
+ <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Temp</h4><h4>66°</h4>
+       </div>
+             <hr>
+             <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Humidity</h4><h4>45°</h4>
+       </div>
+             <hr>
+ 
+       <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Pressure</h4><h4>37 pa</h4>
+       </div>              
+             <hr>
          
-    </div>
-      <div style="
-    /* border-radius: 40px; */
-    /* padding-block: 20px 200px; */
-    border-radius: 40px;
-    background-color: transparent;
-    /* margin: 10px 0px; */
-"> 
-    <hr>
-        <div class="box" style="
-    border-radius: 40px;
-    padding: 16px 31px;
-    display: flex;
-    background-color: transparent;
-    flex-direction: column;
-    align-items: stretch;
-">
-               <h2>POWER SYSTEM</h2>
-
-<div style="
-    background-color: silver;
-">
-
-<div class="w3-border" style="
-    border-radius: 10px;
-    border-radius: 10px;
-">
-  <div class="w3-grey" style="background-color: darkseagreen;height:24px;width:20%"></div>
-</div>
-</div>
-            <p>05:59:48</p>
-            <hr>
-<div style="text-decoration: underline;display: flex;flex-direction: row;justify-content: space-between;">  <h2>Sensor</h2><h2>Data</h2>
-      </div>
-            <hr>
-
-<div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Temp</h4><h4>66°</h4>
-      </div>
-            <hr>
-            <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Humidity</h4><h4>45°</h4>
-      </div>
-            <hr>
-
-      <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Pressure</h4><h4>37 pa</h4>
-      </div>              
-            <hr>
-        
-            
-                   <p><small>MISSION VITALS</small></p>  
-  <div style="/* text-decoration: underline; */display: flex;padding: -51px;/* flex-direction: row; */justify-content: space-between;">  <h4>57.96</h4><h4>27.64</h4><h4>8.73</h4></div>
-
-          
-        
-
-
-
-
-
-          
-    </div></div>
-  </div>
-
-
-
-
-
-</body></html>
+             
+                    <p><small>MISSION VITALS</small></p>  
+   <div style="/* text-decoration: underline; */display: flex;padding: -51px;/* flex-direction: row; */justify-content: space-between;">  <h4>57.96</h4><h4>27.64</h4><h4>8.73</h4></div>
+ 
+           
+         
+ 
+ 
+ 
+ 
+ 
+           
+     </div></div>
+   </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ </body></html>
+ 
