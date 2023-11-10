@@ -67,12 +67,12 @@
     let text = "<option value=\"none\" selected disabled hidden> Choose Your Satellite</option>";
     console.log(text);
     for (let x in myObj) {
-    text += "<option>" + myObj[x].name + "</option>";
+    text += '<option value="'+myObj[x]._id + '">' + myObj[x].name + "</option>";
     }
     document.getElementById("sats").innerHTML = text;
     }
     xmlhttp.open("GET", url);
-    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.setRequestHeader("Content-type", "application/json");
     xmlhttp.send();
     $(document).ready(function(){
     $("#sats").change(function(){
