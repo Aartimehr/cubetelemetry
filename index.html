@@ -1,169 +1,120 @@
-<!DOCTYPE html>
 <html><head>
- <meta charset="utf-6">
-  <meta name="viewport" content="width=device-width">
-  <title>CubeSat Telemetry</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-
-  <script src="script.js">
-  </script>
-  <div style="
-    background-color: transparent;
-    border-radius: 40px;
-    display: flex;
-    /* width: 00%; */
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
-    padding: 0px 10px;
-">
-    <div style="border-radius: 40px;background-color: transparent;"> 
-        <div style="padding: 10px;border-radius: 40px;background-color: transparent;display: flex;justify-content: space-evenly;align-items: flex-end;margin: 10px 0px;" class="box">
-          <div>
-            <img src="images/images.jpg" width="150"> 
-            <p>CALIBRATION</p>
-          </div>
-          <div>
-            <img width="250" src="images/images (1).jpg">
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRAJECTORY</p>
-          </div>
-        </div>
-        <hr>
-        
-              <div style="border-radius: 40px;padding: 0px 10px;display: flex;background-color: transparent;justify-content: space-around;margin: 10px 0px;" class="box">
-  
-            <div style="display: flex;padding: 10px;justify-content: space-evenly;">
+  <meta charset="utf-6">
+   <meta name="viewport" content="width=device-width">
+   <title>CubeSat Telemetry</title>
+   <link href="style.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+ 
+   <script src="script.js"></script>
+   <div style="
+     border-radius: 40px;
+     display: flex;
+     /* width: 00%; */
+     flex-direction: row;
+     align-items: flex-start;
+     justify-content: space-around;
+     padding: 0px 10px;
+ ">
+     <div style="border-radius: 40px;background-color: initial;"> 
+         <div style="padding: 10px;border-radius: 40px;background-color: transparent;display: flex;justify-content: space-evenly;align-items: flex-end;margin: 10px 0px;" class="box">
+          
+           <div>
+             <img width="250" src="images/images (1).jpg">
+             <p>TRAJECTORY</p>
+           </div>
+             
+         </div>
+         <hr>
+               <div style="border-radius: 40px;padding: 0px 10px;display: flex;background-color: transparent;justify-content: space-around;margin: 10px 0px;" class="box">
+   
+             <div style="display: flex;padding: 10px;justify-content: space-evenly;">
+           
           <div style="
-0px: 10px;padding: 0px 10px;">
-            <h2>Relative - Center of earth</h2> 
-            <div style="display: flex;justify-content: space-evenly;flex-direction: column;align-content: space-around;">
-              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Vehicle</h4><h4>Pragyan</h4>
-              </div>
-              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Distance(km)</h4><h4>6,568.09</h4>
-              </div>
-              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Velocity(km/sec)</h4><h4>10.38</h4>
-              </div>
-            </div>
-          </div>
-         <div style="
-    padding: 0px 10px;
-">
-            <h2>Relative - Center of Moon</h2> 
-
-              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <h4>Vehicle</h4><h4>Vikram</h4>
-              </div>
-              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <h4>Distance(km)</h4><h4>1,268.09</h4>
-              </div>
-              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <h4>Velocity(km/sec)</h4><h4>2.45</h4>
-              </div>
-            </div>
+     padding: 0px 0px;
+ ">
+             <h2>distance in earth and moon</h2>
+              <hr>
+               <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;"><p style="color:grey">LAT.</p><p style="color:grey">LONG.</p> <p style="color:grey"> ALT.</p>
+               </div>
+               <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <p>33.38768</p><p>-13.5554</p> <p>238</p>
+               </div>
+              <hr>
+               <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;"><p style="color:grey">PATCH</p><p style="color:grey">YAW</p> <p style="color:grey">ROLL</p>
+               </div>
+              
+     <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <p>38°</p><p>-13.34°</p> <p>238°</p>
+               </div>
+             </div>
+           
+         </div>
+           </div>
+           
           
-        </div>
-          </div>
-          <hr>
-          
+     </div>
+       <div style="
+     /* border-radius: 40px; */
+     /* padding-block: 20px 200px; */
+     border-radius: 40px;
+     background-color: transparent;
+     /* margin: 10px 0px; */
+ "> 
+     <hr>
+         <div class="box" style="
+     border-radius: 40px;
+     padding: 16px 31px;
+     display: flex;
+     background-color: transparent;
+     flex-direction: column;
+     align-items: stretch;
+ ">
+                <h2>POWER SYSTEM</h2>
+ 
+ <div style="
+     background-color: silver;
+ ">
+ 
+ <div class="w3-border" style="
+     border-radius: 10px;
+     border-radius: 10px;
+ ">
+   <div class="w3-grey" style="background-color: darkseagreen;height:24px;width:20%"></div>
+ </div>
+ </div>
+             <p>05:59:48</p>
+             <hr>
+ <div style="text-decoration: underline;display: flex;flex-direction: row;justify-content: space-between;">  <h2>Sensor</h2><h2>Data</h2>
+       </div>
+             <hr>
+ 
+ <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Temp</h4><h4>66°</h4>
+       </div>
+             <hr>
+             <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Humidity</h4><h4>45°</h4>
+       </div>
+             <hr>
+ 
+       <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Pressure</h4><h4>37 pa</h4>
+       </div>              
+             <hr>
          
-    </div>
-      <div style="
-    /* border-radius: 40px; */
-    /* padding-block: 20px 200px; */
-    border-radius: 40px;
-    background-color: transparent;
-    /* margin: 10px 0px; */
-"> 
-        <div class="box" style="
-    border-radius: 40px;
-    padding: 16px 31px;
-    display: flex;
-    background-color: transparent;
-    flex-direction: column;
-    align-items: stretch;
-">
-               <h3>VAL. SENSOR</h3>
-
-<div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange" style="
-    width: 100%;
-">
-</div>
-<h3>PRESSURE.G</h3>
-<div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange" style="
-    width: 100%;
-">
-</div>
-        </div>
-        <hr>
-        
-              
-              <div style="
-    padding-block: 20px;
-    border-radius: 40px;
-    background-color: transparent;
-    display: flex;
-    padding: 0px 20px;
-    flex-direction: row;
-    justify-content: space-between;
-" class="box">
-
-    <div style="
-    display: flex;
-    flex-direction: column;
-    padding: 0px 10px;
-">
-    
-      <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Event</h4><h4>Time</h4></div>        <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <p>S200 PM IGN</p><p>0.1</p>
-      </div>
-      <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>SM2000</h4><h4>0.1</h4>
-      </div>
-    </div>
-    <div style="
-    display: flex;
-    flex-direction: column;
-    padding: 0px 10px;
-    /* align-content: space-around; */
-">
-              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>Event</h4><h4>Time</h4></div>
-              <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <p>S200 PM IGN</p><p>0.1</p></div>
-                    
-                    <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4>SM2000</h4><h4>0.1</h4>
-              </div>
-    </div>
-            
-</div>
-<hr>
-              
-              
+             
+                    <p><small>MISSION VITALS</small></p>  
+   <div style="/* text-decoration: underline; */display: flex;padding: -51px;/* flex-direction: row; */justify-content: space-between;">  <h4>57.96</h4><h4>27.64</h4><h4>8.73</h4></div>
+ 
+           
          
-        <div style="
-    border-radius: 40px;
-    background-color: transparent;
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    align-items: stretch;
-" class="box">
-                   <p><small>MISSION VITALS</small></p>  
-  <div style="/* text-decoration: underline; */display: flex;padding: -51px;/* flex-direction: row; */justify-content: space-between;">  <h4>57.96</h4><h4>27.64</h4><h4>8.73</h4></div>
-<div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-between;">  <h4><small style="color:#808080">m/s</small></h4><h4><small style="color:#808080">m/s</small></h4><h4><small style="color:#808080"><smallstyle="color:#808080">km</smallstyle="color:#808080"></small></h4></div>
-
-        </div>
-        <hr>
-
-
-
-
-
-          
-    </div>
-  </div>
-
-
-
-
-
-</body></html>
+ 
+ 
+ 
+ 
+ 
+           
+     </div></div>
+   </div>
+ 
+ 
+ 
+ 
+ 
+ </body></html>
