@@ -66,15 +66,15 @@
       xmlhttp.onload = function() {
         const satObj = JSON.parse(this.responseText);
         
-        document.getElementById("data-lat").innerHTML = myObj[x].lat;
-        document.getElementById("data-long").innerHTML = myObj[x].long;
-        document.getElementById("data-long").innerHTML = myObj[x].Alt;
-        document.getElementById("data-long").innerHTML = myObj[x].Patch;
-        document.getElementById("data-long").innerHTML = myObj[x].Yaw;
-        document.getElementById("data-long").innerHTML = myObj[x].Roll;
-        document.getElementById("data-long").innerHTML = myObj[x].Temp;
-        document.getElementById("data-long").innerHTML = myObj[x].humidity;
-        document.getElementById("data-long").innerHTML = myObj[x].Pressure;
+        document.getElementById("data-lat").innerHTML = satObj[x].lat;
+        document.getElementById("data-long").innerHTML = satObj[x].long;
+        document.getElementById("data-Alt").innerHTML = satObj[x].Alt;
+        document.getElementById("data-Pitch").innerHTML = satObj[x].Pitch;
+        document.getElementById("data-Yaw").innerHTML = satObj[x].Yaw;
+        document.getElementById("data-Roll").innerHTML = satObj[x].Roll;
+        document.getElementById("data-Temp").innerHTML = satObj[x].Temp;
+        document.getElementById("data-humidity").innerHTML = satObj[x].humidity;
+        document.getElementById("data-Pressure").innerHTML = satObj[x].Pressure;
        
       }
       
@@ -159,10 +159,10 @@
             <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <p id="data-lat">33.38768</p><p id="data-long">-13.5554</p> <p id="data-Alt">238</p>
             </div>
             <hr>
-            <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;"><p style="color:grey">PATCH</p><p style="color:grey">YAW</p> <p style="color:grey">ROLL</p>
+            <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;"><p style="color:grey">Pitch</p><p style="color:grey">YAW</p> <p style="color:grey">ROLL</p>
             </div>
             
-  <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <p id="data-Patch">38°</p><p id="data-Yaw">-13.34°</p> <p id="data-Roll">238°</p>
+  <div style="/* text-decoration: underline; */display: flex;flex-direction: row;justify-content: space-around;">  <p id="data-Pitch">38°</p><p id="data-Yaw">-13.34°</p> <p id="data-Roll">238°</p>
             </div>
           </div>
         
