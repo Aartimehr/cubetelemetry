@@ -59,26 +59,56 @@
     }
   </style>
   <script>
-    var id = "";
+    function myfunction(ID){
+      const xmlhttp = new XMLHttpRequest();
+      let url = "https://cubesatserver.onrender.com/1Q2W3E4R5T/Satellite/" +  ID;
+
+      xmlhttp.onload = function() {
+        const satObj = JSON.parse(this.responseText);
+        
+        document.getElementById("data-lat").innerHTML = myObj[x].lat;
+        document.getElementById("data-long").innerHTML = myObj[x].long;
+        document.getElementById("data-long").innerHTML = myObj[x].Alt;
+        document.getElementById("data-long").innerHTML = myObj[x].Patch;
+        document.getElementById("data-long").innerHTML = myObj[x].Yaw;
+        document.getElementById("data-long").innerHTML = myObj[x].Roll;
+        document.getElementById("data-long").innerHTML = myObj[x].Temp;
+        document.getElementById("data-long").innerHTML = myObj[x].humidity;
+        document.getElementById("data-long").innerHTML = myObj[x].Pressure;
+       
+      }
+      
+      xmlhttp.open("GET", url);
+      xmlhttp.setRequestHeader("Content-type", "application/json");
+      xmlhttp.send();
+    }
+    
+    
+    
+  
     const xmlhttp = new XMLHttpRequest();
     let url = "https://cubesatserver.onrender.com/1Q2W3E4R5T/Satellite/all";
     xmlhttp.onload = function() {
-    const myObj = JSON.parse(this.responseText);
-    let text = "<option value=\"none\" selected disabled hidden> Choose Your Satellite</option>";
-    console.log(text);
-    for (let x in myObj) {
-    text += '<option value="'+myObj[x]._id + '">' + myObj[x].name + "</option>";
+      const myObj = JSON.parse(this.responseText);
+      let text = "<option value=\"none\" selected disabled hidden> Choose Your Satellite</option>";
+      console.log(text);
+      for (let x in myObj) {
+        text += '<option value="'+myObj[x]._id + '">' + myObj[x].name + "</option>";
+      }
+      document.getElementById("sats").innerHTML = text;
     }
-    document.getElementById("sats").innerHTML = text;
-    }
+
     xmlhttp.open("GET", url);
     xmlhttp.setRequestHeader("Content-type", "application/json");
     xmlhttp.send();
     $(document).ready(function(){
-    $("#sats").change(function(){
-        var selectedSat = $(this).children("option:selected").val();
-        alert("you have selected " + selectedSat);
-    });
+      $("#sats").change(function(){
+          var Sat_ID = $(this).children("option:selected").val();
+          // alert("you have selected " + selectedSat);
+
+          myfunction(Sat_ID);
+          
+      });
     });
     </script>
     </head>
