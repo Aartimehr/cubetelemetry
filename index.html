@@ -66,15 +66,15 @@
       xmlhttp.onload = function() {
         const satObj = JSON.parse(this.responseText);
         
-        document.getElementById("data-lat").innerHTML = satObj[x].lat;
-        document.getElementById("data-long").innerHTML = satObj[x].long;
-        document.getElementById("data-Alt").innerHTML = satObj[x].Alt;
-        document.getElementById("data-Pitch").innerHTML = satObj[x].Pitch;
-        document.getElementById("data-Yaw").innerHTML = satObj[x].Yaw;
-        document.getElementById("data-Roll").innerHTML = satObj[x].Roll;
-        document.getElementById("data-Temp").innerHTML = satObj[x].Temp;
-        document.getElementById("data-humidity").innerHTML = satObj[x].humidity;
-        document.getElementById("data-Pressure").innerHTML = satObj[x].Pressure;
+        document.getElementById("data-lat").innerHTML = satObj.lat;
+        document.getElementById("data-long").innerHTML = satObj.long;
+        document.getElementById("data-Alt").innerHTML = satObj.Alt;
+        document.getElementById("data-Pitch").innerHTML = satObj.Pitch;
+        document.getElementById("data-Yaw").innerHTML = satObj.Yaw;
+        document.getElementById("data-Roll").innerHTML = satObj.Roll;
+        document.getElementById("data-Temp").innerHTML = satObj.Temp;
+        document.getElementById("data-humidity").innerHTML = satObj.humidity;
+        document.getElementById("data-Pressure").innerHTML = satObj.Pressure;
        
       }
       
